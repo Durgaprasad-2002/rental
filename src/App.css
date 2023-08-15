@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+}
+body {
+  background-color: slategray;
+  margin: 0;
+  padding: 0;
+}
+
+button:link {
+  content: "loading";
+}

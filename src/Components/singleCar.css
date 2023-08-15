@@ -1,0 +1,94 @@
+.singlecarmain {
+  background-color: slategray;
+  margin-top: 69px;
+  padding: 40px;
+}
+body {
+  background-color: slategrey;
+}
+
+.checked {
+  color: orange;
+}
+span {
+  background-color: white;
+  color: white;
+}
+
+.input-group {
+  bottom: 1px;
+  left: 0px;
+  height: 10px;
+  margin-top: 1vh;
+  width: 80vh;
+}
+.IN {
+  width: 100%;
+}
+
+.form:has(:invalid) .message {
+  opacity: 1;
+  margin: 0.25rem 0 0 0;
+}
+
+label:has(input:invalid),
+label:has(select:invalid) {
+  color: var(--col3);
+  opacity: 0.8;
+}
+
+label:has(input:valid),
+label:has(select:valid) {
+  opacity: 1;
+}
+
+.pay .form:hover:has(:focus, :active):valid .submitCard {
+  max-height: 180px;
+  opacity: 1;
+  transition: opacity 1s ease-out 0.5s, translate 1.3s ease-out;
+  translate: 0 100%;
+}
+
+.pay .form:hover:invalid {
+  transition: all 0.3s ease-out;
+  background-color: var(--col5);
+}
+
+.pay .form:hover:valid {
+  transition: all 0.3s ease-out;
+  background-color: var(--col1);
+}
+
+.form:hover:valid * {
+  color: var(--col2);
+}
+
+.form:hover:valid input,
+.form:hover:valid select {
+  outline: 3px solid var(--col2);
+}
+
+.form:hover:invalid fieldset {
+  border: 1px dashed var(--col3);
+}
+
+.form:hover:valid fieldset {
+  border: 1px dashed var(--col2);
+}
+
+/* Submit block */
+.pay .form .submitCard {
+  display: flex;
+  justify-content: center;
+  background-color: var(--col2);
+  border-radius: 0 0 var(--rad) var(--rad);
+  bottom: 0;
+  padding: 0.5em;
+  opacity: 0;
+  max-height: 0;
+  translate: 0 -100%;
+  position: absolute;
+  width: calc(100% - 2em);
+  transition: all 0.5s ease-out 0.1s;
+  z-index: -1;
+}
